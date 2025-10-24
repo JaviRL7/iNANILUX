@@ -63,7 +63,7 @@ export default function HomePage() {
       <Hero socialStats={[]} />
 
       {/* Galería de Arte */}
-      <Arte />
+      <Arte artworks={artworks} />
     </div>
   );
 }
