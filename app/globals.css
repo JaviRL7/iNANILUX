@@ -1,26 +1,154 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Day Mode */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Backgrounds */
+  --background: #FAFAFA;
+  --background-secondary: #F7D1D5;
+  --card-background: #FFFFFF;
+
+  /* Foreground/Text */
+  --foreground: #816D5A;
+  --foreground-secondary: #816D5A;
+
+  /* Primary */
+  --primary: #EE8778;
+  --primary-hover: #E07262;
+  --primary-light: #F5A598;
+
+  /* Secondary */
+  --secondary: #F7D1D5;
+  --secondary-hover: #F0BFC4;
+  --secondary-light: #FADEE0;
+
+  /* Accent */
+  --accent: #816D5A;
+  --accent-hover: #6E5C4A;
+
+  /* Borders & Shadows */
+  --border: #F7D1D5;
+  --shadow: rgba(129, 109, 90, 0.1);
+
+  /* Fonts */
+  --font-heading: var(--font-playfair), var(--font-cormorant), serif;
+  --font-body: var(--font-inter), var(--font-dm), sans-serif;
+  --font-numbers: var(--font-space), 'Space Grotesk', monospace;
+  --font-accent: var(--font-cormorant), serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Night Mode */
+.dark {
+  /* Backgrounds */
+  --background: #413350;
+  --background-secondary: #746899;
+  --card-background: #524465;
+
+  /* Foreground/Text */
+  --foreground: #FAFAFA;
+  --foreground-secondary: #E0E0E0;
+
+  /* Primary */
+  --primary: #EE8778;
+  --primary-hover: #F5A598;
+  --primary-light: #F7B3A6;
+
+  /* Secondary */
+  --secondary: #746899;
+  --secondary-hover: #8A7EAD;
+  --secondary-light: #9B90BC;
+
+  /* Accent */
+  --accent: #EE8778;
+  --accent-hover: #F5A598;
+
+  /* Borders & Shadows */
+  --border: #5A4773;
+  --shadow: rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Selection */
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* 3D Card Flip Styles */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+.card-container:hover .card-inner,
+.card-container.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.card-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }

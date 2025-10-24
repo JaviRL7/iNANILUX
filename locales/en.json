@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "home": {
+    "welcome": "Welcome to my creative world",
+    "title": "INANILUX",
+    "subtitle": "Pokémon Artist & Content Creator",
+    "description": "Bringing joy through art, creativity, and Pokémon adventures. Based in Madrid, creating magic one pixel at a time.",
+    "viewPortfolio": "View Portfolio",
+    "getInTouch": "Get in Touch",
+    "featuredWork": "Featured Work",
+    "featuredDescription": "A glimpse into my latest creations and favorite pieces",
+    "comingSoon": "Coming Soon",
+    "artwork": "Artwork",
+    "viewAll": "View All Work"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Learn more about my journey, passion, and creative process",
+    "myStory": "My Story",
+    "storyContent": "Welcome! I'm Inanilux, a passionate Pokémon artist and content creator based in Madrid. My journey with Pokémon started years ago, and it has evolved into a beautiful creative adventure. I specialize in fan art, GO Fest coverage, travel experiences, and custom commissions.",
+    "whatIDo": "What I Do",
+    "digitalIllustration": "Digital illustration and Pokémon fan art",
+    "goFest": "GO Fest and Pokémon event coverage",
+    "commissions": "Custom commissions and collaborations",
+    "contentCreation": "Content creation and community engagement",
+    "funFact": "Fun Fact",
+    "funFactContent": "I've been a Pokémon fan since childhood and my favorite Pokémon changes with the seasons."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have a project in mind? Want to collaborate? I'd love to hear from you!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "messagePlaceholder": "Tell me about your project...",
+    "send": "Send Message",
+    "orReach": "Or reach out directly at"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Coming soon! This section will showcase all the amazing artwork and creations.",
+    "artwork": "Artwork",
+    "comingSoon": "More Amazing Art Coming Soon!"
+  },
+  "footer": {
+    "description": "Pokémon artist and content creator bringing joy through art and creativity.",
+    "quickLinks": "Quick Links",
+    "followMe": "Follow Me",
+    "madeWith": "Made with"
+  }
+}

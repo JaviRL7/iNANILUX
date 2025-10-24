@@ -1,0 +1,58 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "portfolio": "Portfolio",
+    "about": "Sobre Mí",
+    "contact": "Contacto"
+  },
+  "home": {
+    "welcome": "Bienvenido a mi mundo creativo",
+    "title": "INANILUX",
+    "subtitle": "Artista Pokémon y Creadora de Contenido",
+    "description": "Creando alegría a través del arte, la creatividad y las aventuras Pokémon. Desde Madrid, creando magia un píxel a la vez.",
+    "viewPortfolio": "Ver Portfolio",
+    "getInTouch": "Contactar",
+    "featuredWork": "Trabajos Destacados",
+    "featuredDescription": "Un vistazo a mis últimas creaciones y piezas favoritas",
+    "comingSoon": "Próximamente",
+    "artwork": "Obra de arte",
+    "viewAll": "Ver Todo"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Conoce más sobre mi viaje, pasión y proceso creativo",
+    "myStory": "Mi Historia",
+    "storyContent": "¡Bienvenido! Soy Inanilux, una apasionada artista Pokémon y creadora de contenido de Madrid. Mi viaje con Pokémon comenzó hace años, y ha evolucionado en una hermosa aventura creativa. Me especializo en fan art, cobertura de GO Fest, experiencias de viaje y comisiones personalizadas.",
+    "whatIDo": "Lo Que Hago",
+    "digitalIllustration": "Ilustración digital y fan art Pokémon",
+    "goFest": "Cobertura de GO Fest y eventos Pokémon",
+    "commissions": "Comisiones personalizadas y colaboraciones",
+    "contentCreation": "Creación de contenido y participación comunitaria",
+    "funFact": "Dato Curioso",
+    "funFactContent": "He sido fan de Pokémon desde la infancia y mi Pokémon favorito cambia con las estaciones."
+  },
+  "contact": {
+    "title": "Contacta Conmigo",
+    "subtitle": "¿Tienes un proyecto en mente? ¿Quieres colaborar? ¡Me encantaría saber de ti!",
+    "name": "Nombre",
+    "email": "Email",
+    "message": "Mensaje",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "tu@email.com",
+    "messagePlaceholder": "Cuéntame sobre tu proyecto...",
+    "send": "Enviar Mensaje",
+    "orReach": "O contacta directamente en"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "¡Próximamente! Esta sección mostrará todas las increíbles obras de arte y creaciones.",
+    "artwork": "Obra de arte",
+    "comingSoon": "¡Más Arte Increíble Próximamente!"
+  },
+  "footer": {
+    "description": "Artista Pokémon y creadora de contenido que trae alegría a través del arte y la creatividad.",
+    "quickLinks": "Enlaces Rápidos",
+    "followMe": "Sígueme",
+    "madeWith": "Hecho con"
+  }
+}
