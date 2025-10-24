@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FadeIn } from "@/components/animations/fade-in";
-import { LucideIcon, Youtube, Instagram, TikTok, Twitter } from "lucide-react";
+import { LucideIcon, Youtube, Instagram, Music, Twitter } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -322,9 +322,9 @@ export function Hero({ socialStats }: HeroProps) {
                           </div>
 
                           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
-                            <TikTok className="w-8 h-8 text-white mx-auto mb-2" />
+                            <Music className="w-8 h-8 text-white mx-auto mb-2" />
                             <div className="text-2xl font-bold text-white font-bricolage">28K</div>
-                            <div className="text-xs text-white/80 font-body">Seguidores</div>
+                            <div className="text-xs text-white/80 font-body">TikTok</div>
                           </div>
 
                           <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">

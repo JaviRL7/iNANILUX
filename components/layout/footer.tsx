@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Youtube, Twitter, Instagram, TikTok, Heart, Mail, MapPin } from "lucide-react";
+import { Youtube, Twitter, Instagram, Music, Heart, Mail, MapPin } from "lucide-react";
 import Image from "next/image";
 
 const socialLinks = [
   { icon: Youtube, href: "https://youtube.com/@inanilux", label: "YouTube", color: "hover:text-red-500" },
   { icon: Twitter, href: "https://twitter.com/inanilux", label: "Twitter", color: "hover:text-blue-400" },
   { icon: Instagram, href: "https://instagram.com/inanilux", label: "Instagram", color: "hover:text-pink-500" },
-  { icon: TikTok, href: "https://tiktok.com/@inanilux", label: "TikTok", color: "hover:text-white" },
+  { icon: Music, href: "https://tiktok.com/@inanilux", label: "TikTok", color: "hover:text-purple-400" },
 ];
 
 const quickLinks = [
