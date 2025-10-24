@@ -61,6 +61,9 @@ export default function HomePage() {
     <div className="w-full">
       {/* Hero con zoom-out y división en cards */}
       <Hero socialStats={[]} />
+
+      {/* Galería de Arte */}
+      <Arte />
     </div>
   );
 }

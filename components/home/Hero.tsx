@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FadeIn } from "@/components/animations/fade-in";
-import { LucideIcon } from "lucide-react";
+import { LucideIcon, Youtube, Instagram, TikTok, Twitter } from "lucide-react";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -59,7 +59,7 @@ export function Hero({ socialStats }: HeroProps) {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top top",
-          end: "+=1800", // Distancia reducida para menos scroll
+          end: "+=1500", // Distancia reducida para animación más rápida
           scrub: 1, // Scrub suave sin tirones
           pin: true,
           anticipatePin: 1,
@@ -107,42 +107,42 @@ export function Hero({ socialStats }: HeroProps) {
         duration: 0.25,
       }, 1.5);
 
-      // ========== FASE 3: Separación de las cards (1.9s - 2.8s) ==========
-      // Las cards se separan añadiendo gap
+      // ========== FASE 3: Separación de las cards (1.9s - 2.3s) ==========
+      // Las cards se separan añadiendo gap de forma rápida
       masterTL.to(cardsWrapperRef.current, {
         gap: "4rem", // Mayor separación
-        ease: "power1.inOut",
-        duration: 0.9,
+        ease: "power2.out", // Más rápido al principio
+        duration: 0.4,
       }, 1.9);
 
-      // ========== FASE 4: Inclinación de cards laterales (2.8s - 3.3s) ==========
+      // ========== FASE 4: Inclinación de cards laterales (2.3s - 2.7s) ==========
       // Card izquierda se inclina hacia la izquierda
       if (cardRefs.current[0]) {
         masterTL.to(cardRefs.current[0], {
           rotateZ: -5,
-          duration: 0.5,
+          duration: 0.4,
           ease: "power1.out",
-        }, 2.8);
+        }, 2.3);
       }
 
       // Card derecha se inclina hacia la derecha
       if (cardRefs.current[2]) {
         masterTL.to(cardRefs.current[2], {
           rotateZ: 5,
-          duration: 0.5,
+          duration: 0.4,
           ease: "power1.out",
-        }, 2.8);
+        }, 2.3);
       }
 
-      // ========== FASE 5: Flip de TODAS las cards a la vez (3.3s - 4.1s) ==========
+      // ========== FASE 5: Flip de TODAS las cards a la vez (2.7s - 3.4s) ==========
       // Todas las cards se voltean simultáneamente
       cardRefs.current.forEach((card) => {
         if (card) {
           masterTL.to(card, {
             rotateY: 180,
-            duration: 0.8,
+            duration: 0.7,
             ease: "power1.inOut",
-          }, 3.3);
+          }, 2.7);
         }
       });
 
@@ -283,13 +283,68 @@ export function Hero({ socialStats }: HeroProps) {
                   />
 
                   {/* Contenido con z-index superior */}
-                  <div className="max-w-xs relative z-10">
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 md:mb-6 font-bricolage drop-shadow-2xl">
-                      {card.backTitle}
-                    </h3>
-                    <p className="text-white text-base md:text-lg lg:text-xl font-medium font-body leading-relaxed drop-shadow-lg">
-                      {card.backContent}
-                    </p>
+                  <div className="w-full h-full relative z-10 flex flex-col items-center justify-center p-8">
+                    {index === 0 ? (
+                      // CARD ROJA - Redes Sociales
+                      <>
+                        {/* Foto circular pequeña arriba */}
+                        <div className="mb-6">
+                          <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                            <Image
+                              src="/fotoina.jpg"
+                              alt="Inanilux"
+                              width={80}
+                              height={80}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+
+                        <h3 className="text-3xl md:text-4xl font-extrabold text-white mb-2 font-bricolage drop-shadow-2xl text-center">
+                          Sígueme
+                        </h3>
+                        <p className="text-white/90 text-sm mb-6 font-body text-center">
+                          Únete a la comunidad
+                        </p>
+
+                        {/* Redes sociales con números */}
+                        <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
+                          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+                            <Youtube className="w-8 h-8 text-white mx-auto mb-2" />
+                            <div className="text-2xl font-bold text-white font-bricolage">45K</div>
+                            <div className="text-xs text-white/80 font-body">Suscriptores</div>
+                          </div>
+
+                          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+                            <Instagram className="w-8 h-8 text-white mx-auto mb-2" />
+                            <div className="text-2xl font-bold text-white font-bricolage">32K</div>
+                            <div className="text-xs text-white/80 font-body">Seguidores</div>
+                          </div>
+
+                          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+                            <TikTok className="w-8 h-8 text-white mx-auto mb-2" />
+                            <div className="text-2xl font-bold text-white font-bricolage">28K</div>
+                            <div className="text-xs text-white/80 font-body">Seguidores</div>
+                          </div>
+
+                          <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4 text-center">
+                            <Twitter className="w-8 h-8 text-white mx-auto mb-2" />
+                            <div className="text-2xl font-bold text-white font-bricolage">15K</div>
+                            <div className="text-xs text-white/80 font-body">Seguidores</div>
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      // OTRAS CARDS - Contenido original
+                      <div className="max-w-xs">
+                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 md:mb-6 font-bricolage drop-shadow-2xl">
+                          {card.backTitle}
+                        </h3>
+                        <p className="text-white text-base md:text-lg lg:text-xl font-medium font-body leading-relaxed drop-shadow-lg">
+                          {card.backContent}
+                        </p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
